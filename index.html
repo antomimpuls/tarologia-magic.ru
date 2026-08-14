@@ -29,7 +29,7 @@ const SITE_SETTINGS = {
   'responseTime': '5 минут',
   'metrikaMessengerVisible': false
 };
-const PSYCHIC_NAME=SITE_SETTINGS.psychicName||'';
+const PSYCHIC_NAME=SITE_SETTINGS.psychicName||'Мелисса';
 const PHONE_DIGITS=(SITE_SETTINGS.phoneNumber||'').replace(/\D/g,'');
 const WHATSAPP_MESSAGE=PSYCHIC_NAME ? `Здравствуйте, ${PSYCHIC_NAME}! Хочу обратиться к вам за помощью.` : 'Здравствуйте, хочу обратиться к вам за помощью.';
 const ENCODED_MESSAGE=encodeURIComponent(WHATSAPP_MESSAGE);
@@ -1183,7 +1183,7 @@ function replaceNamePlaceholders(name){
 }
 
 function setImagesAndTexts(){
-    const psychicName = SETTINGS.psychicName || 'Мастер Алёна';
+    const psychicName = SETTINGS.psychicName || 'Мелисса';
     replaceNamePlaceholders(psychicName);
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription && ogDescription.content && psychicName) {
